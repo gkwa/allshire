@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-   fmt.Println("Hello, World!")
-   fmt.Println(GetBuildInfo())
+	fmt.Println("Hello, World!")
+	fmt.Println(GetBuildInfo())
 }
 

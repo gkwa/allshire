@@ -25,7 +25,7 @@ var Default = Iterate // default mage target
 
 const (
 	ldFlagsPrefix = "main"
-buildTarget   = "{{ cookiecutter.project_slug }}"
+	buildTarget   = "{{ cookiecutter.project_slug }}"
 )
 
 func init() {

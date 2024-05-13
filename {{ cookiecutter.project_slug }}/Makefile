@@ -10,7 +10,7 @@ FULL_SHA := $(shell git rev-parse HEAD)
 
 export GOVERSION # goreleaser wants this
 
-PREFIX := github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/version
+PREFIX := main
 LDFLAGS = -s -w
 LDFLAGS += -X $(PREFIX).Version=$(VERSION)
 LDFLAGS += -X '$(PREFIX).Date=$(DATE)'
@@ -32,7 +32,7 @@ check: tidy fmt lint vet
 build: $(BIN)
 
 $(BIN): $(SRC)
-	go build -ldflags "$(LDFLAGS)" -o $@ main.go
+	go build -ldflags "$(LDFLAGS)" -o $@
 
 .PHONY: goreleaser # run goreleaser
 goreleaser:
