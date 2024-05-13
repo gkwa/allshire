@@ -93,7 +93,7 @@ func Build() error {
 		ldFlagsPrefix, fullGitSHA,
 	)
 
-	return sh.Run("go", "build", "-ldflags", ldflags, "-o", buildTarget, "")
+	return sh.Run("go", "build", "-ldflags", ldflags, "-o", buildTarget)
 }
 
 func Install() error {
