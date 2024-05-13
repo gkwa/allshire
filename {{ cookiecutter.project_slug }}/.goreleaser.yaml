@@ -9,7 +9,6 @@ builds:
   - linux
   - windows
   - darwin
-  
   goarch:
   - amd64
   binary: {{ cookiecutter.project_slug }}
