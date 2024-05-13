@@ -6,9 +6,7 @@ import (
 )
 
 func main() {
-	args := os.Args[1:]
-
-	if len(args) > 0 && (args[0] == "version" || args[0] == "-version") {
+	if len(os.Args) > 1 && (os.Args[1] == "-version" || os.Args[1] == "version" || os.Args[1] == "-v") {
 		buildInfo := GetBuildInfo()
 		fmt.Println(buildInfo)
 		os.Exit(0)
